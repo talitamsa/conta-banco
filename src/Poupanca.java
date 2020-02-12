@@ -1,18 +1,20 @@
 public class Poupanca extends Conta {
-    private double saldo;
     private double taxaDeJuros;
 
     public Poupanca(){
 
     }
     public Poupanca(Cliente cliente, double saldo, double taxaDeJuros){
-        this.saldo = saldo;
+        super(cliente, saldo);
         this.taxaDeJuros = taxaDeJuros;
+
     }
 
     public void recolheJuros(){
-        if (this.saldo >= 0){
-            this.saldo = taxaDeJuros*saldo+saldo;
+        Double saldo =  this.getSaldo();
+        if (saldo >= 0){
+            saldo = (taxaDeJuros*saldo)+saldo;
+            this.setSaldo(saldo);
             System.out.println("Seu saldo é: " + saldo);
         } else {
             System.out.println("Não possui juros a recolher!");

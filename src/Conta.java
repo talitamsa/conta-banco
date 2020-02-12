@@ -12,10 +12,10 @@ public class Conta {
     }
 
     public void saque(double valor){
-        if (saldo>=valor){
+        if (this.saldo>=valor){
             this.saldo-=valor;
-            System.out.println("Seu saldo "+ saldo);
-        } else{
+            System.out.println("Saldo atual "+ this.saldo);
+        } else {
             System.out.println("Saldo insuficiente");
         }
     }
@@ -29,8 +29,8 @@ public class Conta {
         }
     }
 
-    public void consultaSaldo(Cliente cliente){
-        System.out.println("Seu saldo é: " + saldo);
+    public void consultaSaldo(){
+        System.out.println("Seu saldo é: " + this.saldo);
     }
 
     public Cliente getCliente() {
