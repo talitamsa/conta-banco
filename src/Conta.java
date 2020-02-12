@@ -29,7 +29,7 @@ public class Conta {
         }
     }
 
-    public String saldoEmTela(Cliente cliente){
+    public void consultaSaldo(Cliente cliente){
         System.out.println("Seu saldo é: " + saldo);
     }
 }
