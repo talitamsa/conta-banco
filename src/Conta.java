@@ -11,7 +11,7 @@ public class Conta {
         this.saldo = saldo;
     }
 
-    public String saque(double valor){
+    public void saque(double valor){
         if (saldo>=valor){
             this.saldo-=valor;
             System.out.println("Seu saldo "+ saldo);
@@ -31,5 +31,21 @@ public class Conta {
 
     public void consultaSaldo(Cliente cliente){
         System.out.println("Seu saldo é: " + saldo);
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
 }
